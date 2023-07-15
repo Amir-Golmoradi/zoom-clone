@@ -26,12 +26,17 @@ const items = [
   },
 ];
 
-export default function Menu() {
+export default function Menu({ navigation }) {
+  const openMeeting = () => {
+    navigation.navigate("Room");
+  };
+
   return (
     <View style={styles.container}>
       {items.map((item, index) => (
         <View key={index} style={styles.buttonContainer}>
           <TouchableOpacity
+            onPress={() => openMeeting()}
             style={{
               ...styles.button,
               backgroundColor: item.customColor ? item.customColor : "#0470DC",
@@ -48,8 +53,8 @@ export default function Menu() {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 25,
-    paddingBottom: 10,
+    marginTop: 20,
+    paddingBottom: 1,
     borderBottomColor: "#1f1f1f",
     borderBottomWidth: 1,
     flexDirection: "row",
@@ -57,8 +62,8 @@ const styles = StyleSheet.create({
   },
 
   buttonContainer: {
-    alignItems: "center",
     flex: 1,
+    alignItems: "center",
   },
 
   button: {
@@ -72,8 +77,9 @@ const styles = StyleSheet.create({
 
   menuText: {
     color: "#858585",
-    fontSize: 12,
+    fontSize: 10,
     paddingTop: 10,
     fontWeight: 600,
+    textAlign: "center",
   },
 });

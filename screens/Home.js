@@ -5,12 +5,12 @@ import SearchBar from "../src/components/SearchBar";
 import Menu from "../src/components/MenuButton";
 import Contact from "../src/components/ContactMenu";
 
-export default function HomePage() {
+export default function HomePage({ navigation }) {
   return (
     <View style={styles.container}>
       <Header />
       <SearchBar />
-      <Menu />
+      <Menu navigation={navigation} />
       <Contact />
     </View>
   );
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   container: {
     // marginTop: StatusBar.currentHeight,
     backgroundColor: "#1c1c1c",
-    padding: 50,
+    padding: 19,
     height: "100%",
   },
 });

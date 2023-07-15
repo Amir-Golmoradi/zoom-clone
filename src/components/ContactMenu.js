@@ -56,6 +56,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginTop: 20,
     alignItems: "center",
+    paddingHorizontal:-40
   },
 
   starIcon: {
@@ -68,7 +69,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "white",
-    paddingLeft: 15,
+    paddingLeft: 10,
     fontWeight: "bold",
     fontSize: 18,
   },
